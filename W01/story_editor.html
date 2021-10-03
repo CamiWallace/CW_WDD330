@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Story Writer</title>
+        <script>
+            function loadStory(){
+                var storyName = document.getElementById("title").value
+                var storyHTML = localStorage.getItem(storyName)
+                document.getElementById("story_editor").value = storyHTML
+            }
+             function saveStory(){
+                var storyName = document.getElementById("title").value
+                var storyHTML = document.getElementById("story_editor").value
+                window.localStorage.setItem(storyName, storyHTML)
+
+            } 
+            function displayStory(){
+                var storyHTML = document.getElementById("story_editor").value
+                var storyTitle = document.getElementById("title").value
+                document.getElementById("display").innerHTML = storyTitle + ": " + storyHTML 
+
+            }
+        </script>
+        <style>
+            body{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            textarea{
+                width: 80vw;
+                height: 50vw;
+                background-color: rgb(205, 245, 231);
+                justify-self: center;
+                align-self: center;
+                margin: 3%;
+                
+            }
+            .buttons{
+                align-self: center;
+            }
+            header{
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Story Editor</h1><hr>
+        </header>
+        <div class="titleInput">
+            <label for="title">Story Name: </label>
+            <input type="text" id="title" name="title"><br> 
+        </div>        
+        <section class="buttons">
+            <button onclick="loadStory()" id="edit" type="button">Edit</button>
+            <button onclick="saveStory()" id="save" type="button">Save</button>
+            <button onclick="displayStory()" id="btn_display" type="button">Display</button>
+        </section>
+        <textarea id="story_editor" placeholder="Start your story here."></textarea>
+        <div id="display"></div>
+
+    </body>
+</html>
