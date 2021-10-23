@@ -1,0 +1,45 @@
+<!--Author: Cami Wallace
+    Class: WDD330
+Refrences:
+     https://thecodingpie.com/post/how-to-build-a-todo-list-app-with-javascript-and-local-storage
+     https://github.com/andrew-peterson0429/to_do_app
+     https://codepen.io/olayinkaos/pen/vxMdvd
+     https://dev.to/vladimirschneider/simple-to-do-list-using-localstorage-29on
+    -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ToDo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel='stylesheet' href='style.css'>
+    
+  </head>
+
+  <body onload="getFromLocalStorage()">
+      <header>
+        <h1>ToDo Items</h1>
+      </header>
+      <body>
+        <ul id="todo_menu_bar">
+          <li id="show_all_todos" onclick="showAll()">All</li>
+          <li id="show_active_todos" onclick="showActive()">Active</li>
+          <li id="show_completed_todos" onclick="showCompleted()">Completed</li>
+        </ul>
+        <section id="toDoCard">
+          <h2>Tasks:</h2>
+        <ul id="listOfToDos">
+        
+        </ul>
+        <div id="display">Tasks left</div>
+      </section>
+      <form id="add_task">
+        <label for="new_task">New Task</label>
+        <input type="text" id="new_task" name="new_task"> 
+        <input type="submit" value="Add Task">
+      </form>
+      </body>
+
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
