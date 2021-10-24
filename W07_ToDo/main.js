@@ -56,6 +56,7 @@ function renderItems(todoArray){
         li.setAttribute('data-key', item.id);
              if(item.completed == true){
                  li.classList.add('checked');
+                 li.style.textDecoration = "line-through";
              }
 
        // console.log(classList);
