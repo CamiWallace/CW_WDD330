@@ -1,3 +1,16 @@
+html{
+    background-color: #0D324D;
+}
+body{
+    width: 60vw;
+    background-color: #d4f4dd;
+    margin-left: 20%;
+}
 img{
     max-width: 40vmin;
+    padding: 1%;
+    margin-left: 19vw;
+}
+#intro{
+    text-align: center;
 }
