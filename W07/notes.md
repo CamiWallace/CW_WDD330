@@ -1,0 +1,1 @@
+Functions can have properties and methods themselves.
