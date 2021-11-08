@@ -20,13 +20,13 @@ window.addEventListener('load', () => {
     context.strokeStyle = "purple";
     context.strokeRect(300,200,100,100);
 
-    context.beginPath();
-    //where drawing starts
-    context.moveTo(600,600);
-    context.lineTo(700,600);
-    context.lineTo(700,650);
-    context.closePath();
-    context.stroke();
+    // context.beginPath();
+    // //where drawing starts
+    // context.moveTo(600,600);
+    // context.lineTo(700,600);
+    // context.lineTo(700,650);
+    // context.closePath();
+    // context.stroke();
 
     //simple drawing on canvas
     let painting = false;
