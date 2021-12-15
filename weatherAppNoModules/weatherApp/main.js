@@ -27,7 +27,7 @@ function useMyLocation(){
         geoData = data;
         //call function to print weather to user
         displayWeather(data);
-    });
+    })
 }
 
 function fetchForcast(){
@@ -35,15 +35,14 @@ function fetchForcast(){
     let state = document.getElementById('state').value; 
     console.log(city, state, key);
     //make call to the weather API
-    fetch('HTTPS://api.openweathermap.org/data/2.5/weather?q='+ city +',' + state + '&appid=' + key)
-    
+    fetch('HTTPS://api.openweathermap.org/data/2.5/weather?q='+ city +',' + state + '&appid=' + key)  
     //convert the data to JSON
     .then(function(resp) {return resp.json()})
     .then(function(data){
         console.log(data);
         //call function to print weather to user
         displayWeather(data);
-    });
+    })
 }
 
 function getWeeklyWeatherData(){
@@ -59,7 +58,7 @@ function getWeeklyWeatherData(){
             console.log('Weekly Data');
             weeklyForcast();
             displayWeeklyWeather(data);
-        });
+        })
     }else{
         fetch('HTTPS://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&appid='+key)
         //convert the data to JSON
@@ -70,7 +69,7 @@ function getWeeklyWeatherData(){
             console.log('Weekly Data');
             weeklyForcast();
             displayWeeklyWeather(data);
-        });
+        })
     }
 }
 
