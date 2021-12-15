@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+html{
+    background-color: #b0d0d3;
+}
+/* this is the start of css for the weather api*/
+#daily, #weekly{
+    display: none;    
+}
+#homeDiv{
+    display: block;    
+}
+h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 8vmin;
+    text-align: center;
+    color: #8fc93a;
+}
+h2{
+    font-family: 'Indie Flower', cursive;
+    font-size: 6vmin;
+    text-align: center;
+    color: #0e273c;
+}
+h3, p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5vmin;
+    color: #0e273c;
+}
+
+/* css for the nav bar and links*/
+.menu ul{
+    background-color: #0e273c;
+    list-style-type: none;
+    color: white;
+    text-align: left;    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 5vmin;
+    font-family: 'Indie Flower', cursive;
+}
+a:hover{
+    color: #f7e733;
+    text-decoration: underline;
+}
+.page{
+    padding: 2vmax;
+    text-align: center;
+}
+
+body{
+  background-color: white;
+  width: 80%;
+  margin-left: 10%;    
+}
+footer{
+    background-color: rgb(13, 13, 61);
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3vim;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+#weeklyw, #dailyW{
+    color: #8fc93a;
+    border-radius: 2%;
+    border-color: #f7e733;
+}
+#weeklyw:hover, #dailyW:hover{
+    color: #f7e733;
+    cursor: pointer;
+}
+#myLocationBtn{
+    display: none;
+    margin-left: 40%;
+    margin-top: 2%;
+}
+button{
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5vmin;
+    background-color: #f7ef97;
+    border-radius: 2%;
+    border-color: #f7e733;
+}
+button:hover{
+    background-color: #8fc93a;
+}
+img{
+    max-width: 75px;
+}
+.WeekWeather{
+    border-style: solid;
+    border-radius: 2%;
+    border-color: #f7ef97;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

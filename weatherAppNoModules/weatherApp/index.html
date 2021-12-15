@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="nav_bar">
+        <nav class="menu" >
+            <ul>
+                <li><a href="#home" id="home" class="nav-link" onclick='homeContent()'>Home</a></li>
+                <!--<li><a href="#dailyw" id="dailyW" class="nav-link" onclick='dailyForcast()'>Daily Forcast</a></li>
+                <li><a href="#weeklyw" id="weeklyw" class="nav-link" onclick='getWeeklyWeatherData()'>Weekly Forcast</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page" id="homeDiv">
+      <h1>Weather App</h1>
+      <h3>Please Enter Desired City and State.</h3>
+      <input id="city" type="text" placeholder="City">
+      <input id="state" type="text" placeholder="State">
+      <button onclick='fetchForcast()'>Get Weather Forcast</button>
+      <button id="myLocationBtn" onclick="useMyLocation()">Use My Location</button>
+    </div>
+
+    <div class="page" id="daily" >
+        <h1>Daily Forcast</h1>
+        <div id="todays_output">
+            <h1 id="display_city"></h1>
+            <h2 id="display_temp"></h2> 
+            <img src="placeholder.jpg" alt="weather icon" id="dailyImg">
+            <h3 id="today_high"></h3>
+            <h3 id="today_low"></h3>
+            <h3 id="percipitation"></h3>
+            <h3 id="display_desc"></h3>
+            <h2 id="weeklyw" onclick='getWeeklyWeatherData()'>Show 5 Day Forcast</h2>
+        </div>            
+    </div>
+
+    <div id="weekly" class="page">
+        <h1>Weekly Forcast</h1>
+        <div class="WeekWeather">
+            <h3>Day 1</h3>
+            <p class = "weekTemp" id="day1"></p>
+            <div class="image"><img id ="img1" src="./placeholder.jpg" alt=""></div>
+            <p class="weekDescription" id="day1Description"></p>
+        </div>
+
+        <div class="WeekWeather">
+            <h3>Day 2</h3>
+            <p class = "weekTemp" id="day2"></p>
+            <div class="image"><img id ="img2" src="./placeholder.jpg" alt=""></div>
+            <p class="weekDescription" id="day2Description"></p>
+        </div>
+
+        <div class="WeekWeather">
+            <h3>Day 3</h3>
+            <p class = "weekTemp" id="day3"></p>
+            <div class="image"><img id ="img3" src="./placeholder.jpg" alt=""></div>
+            <p class="weekDescription" id="day3Description"></p>    
+        </div>
+
+        <div class="WeekWeather">
+            <h3>Day 4</h3>
+            <p class = "weekTemp" id="day4"></p>
+            <div class="image"><img id ="img4" src="./placeholder.jpg" alt=""></div>
+            <p class="weekDescription" id="day4Description"></p>
+        </div>
+
+        <div class="WeekWeather">
+            <h3>Day 5</h3>
+            <p class = "weekTemp" id="day5"></p>
+            <div class="image"><img id ="img5" src="./placeholder.jpg" alt=""></div>
+            <p class="weekDescription" id="day5Description"></p>
+        </div>
+        <h2 id="dailyW"  onclick='dailyForcast()'>Daily Forcast</h2>
+
+    </div>
+
+    <footer>
+        <div id="cami">Cami Wallace 2021</div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

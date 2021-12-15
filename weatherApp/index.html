@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="nav_bar">
+        <nav class="menu" >
+            <ul>
+                <li><a href="#home" id="home" class="nav-link" onclick='homeContent()'>Home</a></li>
+                <li><a href="#dailyw" id="dailyW" class="nav-link" onclick='dailyForcast()'>Daily Forcast</a></li>
+                <li><a href="#weeklyw" id="weeklyw" class="nav-link" onclick='getweeklyForcast()'>Weekly Forcast</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page" id="homeDiv">
+      <h1>Weather App</h1>
+      <h3>Please Enter Desired City and State.</h3>
+      <input id="city" type="text" placeholder="City">
+      <input id="state" type="text" placeholder="State">
+      <button onclick='fetchForcast()'>Get Weather Forcast</button>
+      <button id="myLocationBtn" onclick="myLocation()">Use My Location</button>
+    </div>
+
+    <div class="page" id="daily" >
+        <h1>Daily Forcast</h1>
+        <div id="todays_output">
+            <h1 id="display_city"></h1>
+            <h2 id="display_temp"></h2> 
+            <h3 id="today_high"></h3>
+            <h3 id="today_low"></h3>
+            <h3 id="percipitation"></h3>
+            <h3 id="display_desc"></h3>
+        </div>            
+    </div>
+
+    <div id="weekly" class="page">
+        <h1>Weekly Forcast</h1>
+        <div class="weekly_output" id="wekly_container">
+            <div class="weekly" id="day1"></div>
+            <div class="weekly" id="day2"></div>
+            <div class="weekly" id="day3"></div>
+            <div class="weekly" id="day4"></div>
+            <div class="weekly" id="day5"></div>
+            <div class="weekly" id="day6"></div>
+            <div class="weekly" id="day7"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="cami">Cami Wallace 2021</div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
