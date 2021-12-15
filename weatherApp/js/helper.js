@@ -34,7 +34,7 @@ function getCoordinates(){
 
 //retrieves data for daily forcast from geolocation
 function getDailyForcastFromGeolocation(){
-    fetch('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid='+key)
+    fetch('HTTPS://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid='+key)
     //convert the data to JSON
     .then(function(resp) {return resp.json()})
     .then(function(data){
@@ -44,7 +44,7 @@ function getDailyForcastFromGeolocation(){
 }
 
 function getDailyForcastFromCityState(city, state){
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+ city +',' + state + '&appid=' + key) 
+    fetch('HTTPS://api.openweathermap.org/data/2.5/weather?q='+ city +',' + state + '&appid=' + key) 
     //convert the data to JSON
     .then(function(resp) {return resp.json()})
     .then(function(data){
@@ -55,7 +55,7 @@ function getDailyForcastFromCityState(city, state){
 
 function getWeeklyDataForGeolocationAndCityState(city, state){
     if(city != null && city != '' && state != null && state != ''){
-        fetch('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&lon='+state+'&appid='+key)
+        fetch('HTTPS://api.openweathermap.org/data/2.5/forecast?q='+city+'&lon='+state+'&appid='+key)
         //convert the data to JSON
         .then(function(resp) {return resp.json()})
         .then(function(data){
@@ -64,7 +64,7 @@ function getWeeklyDataForGeolocationAndCityState(city, state){
             weeklyForcastData = data;
         });
     }else{
-        fetch('http://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&appid='+key)
+        fetch('HTTPS://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&appid='+key)
         //convert the data to JSON
         .then(function(resp) {return resp.json()})
         .then(function(data){
