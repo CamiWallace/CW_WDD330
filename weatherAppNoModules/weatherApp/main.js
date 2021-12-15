@@ -19,7 +19,7 @@ window.addEventListener('load', ()=>{
 })
 
 function useMyLocation(){
-    fetch('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid='+key)
+    fetch('HTTPS://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid='+key)
     //convert the data to JSON
     .then(function(resp) {return resp.json()})
     .then(function(data){
@@ -35,7 +35,7 @@ function fetchForcast(){
     let state = document.getElementById('state').value; 
     console.log(city, state, key);
     //make call to the weather API
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+ city +',' + state + '&appid=' + key)
+    fetch('HTTPS://api.openweathermap.org/data/2.5/weather?q='+ city +',' + state + '&appid=' + key)
     
     //convert the data to JSON
     .then(function(resp) {return resp.json()})
@@ -50,7 +50,7 @@ function getWeeklyWeatherData(){
     let city = document.getElementById('city').value; 
     let state = document.getElementById('state').value;
     if(city != null && city != '' && state != null && state != ''){
-        fetch('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&lon='+state+'&appid='+key)
+        fetch('HTTPS://api.openweathermap.org/data/2.5/forecast?q='+city+'&lon='+state+'&appid='+key)
         //convert the data to JSON
         .then(function(resp) {return resp.json()})
         .then(function(data){
@@ -61,7 +61,7 @@ function getWeeklyWeatherData(){
             displayWeeklyWeather(data);
         });
     }else{
-        fetch('http://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&appid='+key)
+        fetch('HTTPS://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&appid='+key)
         //convert the data to JSON
         .then(function(resp) {return resp.json()})
         .then(function(data){
@@ -93,7 +93,7 @@ function displayWeather(d){
 	document.getElementById('display_city').innerHTML = d.name;
     document.getElementById('today_high').innerHTML = 'Todays High: '+ temp_max_f + '&deg;';
     document.getElementById('today_low').innerHTML = 'Todays Low: '+ temp_min_f + '&deg;';
-    document.getElementById('dailyImg').src ='http://openweathermap.org/img/wn/'+ icon_code +'@2x.png';
+    document.getElementById('dailyImg').src ='HTTPS://openweathermap.org/img/wn/'+ icon_code +'@2x.png';
 }
 
 function displayWeeklyWeather(d){
@@ -117,19 +117,19 @@ function displayWeeklyWeather(d){
 
     document.getElementById('day1').innerHTML = avTemperature0  + '&deg;';;
     document.getElementById('day1Description').innerHTML = weatherDescription0;
-    document.getElementById('img1').src = 'http://openweathermap.org/img/wn/'+ icon0 +'@2x.png';
+    document.getElementById('img1').src = 'HTTPS://openweathermap.org/img/wn/'+ icon0 +'@2x.png';
     document.getElementById('day2').innerHTML = avTemperature1  + '&deg;';;
     document.getElementById('day2Description').innerHTML = weatherDescription1;
-    document.getElementById('img2').src = 'http://openweathermap.org/img/wn/'+ icon1 +'@2x.png';
+    document.getElementById('img2').src = 'HTTPS://openweathermap.org/img/wn/'+ icon1 +'@2x.png';
     document.getElementById('day3').innerHTML = avTemperature2  + '&deg;';;
     document.getElementById('day3Description').innerHTML = weatherDescription2;
-    document.getElementById('img3').src = 'http://openweathermap.org/img/wn/'+ icon2 +'@2x.png';
+    document.getElementById('img3').src = 'HTTPS://openweathermap.org/img/wn/'+ icon2 +'@2x.png';
     document.getElementById('day4').innerHTML = avTemperature3  + '&deg;';;
     document.getElementById('day4Description').innerHTML = weatherDescription3;
-    document.getElementById('img4').src = 'http://openweathermap.org/img/wn/'+ icon3 +'@2x.png';
+    document.getElementById('img4').src = 'HTTPS://openweathermap.org/img/wn/'+ icon3 +'@2x.png';
     document.getElementById('day5').innerHTML = avTemperature4  + '&deg;';;
     document.getElementById('day5Description').innerHTML = weatherDescription4;
-    document.getElementById('img5').src = 'http://openweathermap.org/img/wn/'+ icon4 +'@2x.png';
+    document.getElementById('img5').src = 'HTTPS://openweathermap.org/img/wn/'+ icon4 +'@2x.png';
 }
 
 function homeContent() {
